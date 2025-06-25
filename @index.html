@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EchoBiz | Buy Ready-Made Business Websites</title>
+
+  <meta name="description" content="Buy ready-to-customize websites for any business. From salons to real estate, we build it – you make it yours." />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+/* Light Theme Support */
+body.light-theme {
+  background: #f0f2f5;
+  color: #0d1117;
+}
+
+body.light-theme .card {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+body.light-theme .card h2 {
+  color: #0d1117;
+}
+
+body.light-theme .card button {
+  background: #1f6feb;
+  color: #fff;
+}
+
+body.light-theme .features {
+  color: #444;
+}
+
+body.light-theme header h1 {
+  color: #1f6feb;
+}
+
+body.light-theme footer {
+  color: #444;
+}
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Fira Code', monospace;
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #30363d;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #58a6ff;
+    }
+
+    header p {
+      color: #8b949e;
+      margin-top: 0.5rem;
+    }
+
+    .shop-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    footer a:hover {
+  color: #58a6ff;
+  text-decoration: underline;
+}
+
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #58a6ff;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      color: #fff;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin: 0.5rem 0;
+    }
+
+    .features {
+      font-size: 0.85rem;
+      color: #8b949e;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .card button {
+      background: #58a6ff;
+      color: #0d1117;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-family: 'Fira Code';
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: #1f6feb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
+.price {
+  font-size: 0.85rem;
+  color: #9fef00;
+  margin-bottom: 1rem;
+}
+
+
+  </style>
+</head>
+<section style="text-align: center; margin-top: 1rem;">
+  <input id="searchBox" type="text" placeholder="🔍 Search business sites..." 
+    style="width: 90%; max-width: 400px; padding: 0.6rem 1rem; font-family: 'Fira Code'; border-radius: 8px; border: 1px solid #30363d; background: #161b22; color: #c9d1d9;">
+</section>
+
+<body>
+<section style="max-width: 900px; margin: auto; padding: 2rem 1rem; text-align: center; border-bottom: 1px solid #30363d;">
+
+  <h2 style="color: #58a6ff; font-size: 1.5rem; margin-bottom: 1rem;">💡 How It Works</h2>
+
+  <button id="toggleHowItWorks" style="background: #58a6ff; color: #0d1117; font-family: 'Fira Code'; border: none; padding: 0.6rem 1rem; border-radius: 8px; cursor: pointer; margin-bottom: 1rem;">
+    🔽 Show Steps
+  </button>
+
+  <div id="howItWorksContent" style="display: none; transition: all 0.3s ease;">
+
+    <div style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); font-size: 0.95rem;">
+      <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 10px;">
+        <h3 style="color: #9fef00;">1. Pick a Site</h3>
+        <p>Choose the business website style that fits you best — salon, food, real estate, and more.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 10px;">
+        <h3 style="color: #9fef00;">2. Tell Us Your Details</h3>
+        <p>Send us your business name, logo, photos, and WhatsApp number — we’ll do the edits.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 10px;">
+        <h3 style="color: #9fef00;">3. We Deliver</h3>
+        <p>We customize and deploy your website — usually within 48 hours. Full ownership, full control.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <a href="https://wa.me/254721635810?text=Hi%20EchoLearn%2C%20I%20want%20to%20order%20a%20business%20website!" 
+         style="display: inline-block; background: #58a6ff; color: #0d1117; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: bold; font-family: 'Fira Code'; transition: background 0.3s;">
+        🚀 Get Started on WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+  <header>
+    <h1>🌍 EchoBiz Website Shop</h1>
+<p>We build pro websites for every business. You customize it. We ship it fast.</p>
+
+  </header>
+  <div style="text-align: center; margin-top: 1rem;">
+  <button id="themeToggle" style="background: #1f6feb; color: #fff; font-family: 'Fira Code'; border: none; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer;">
+    ☀️ Light Mode
+  </button>
+</div>
+
+
+  <section class="shop-container">
+
+    <!-- Example Site: Ready Now -->
+ <div class="card">
+  <h2>Salon & Beauty</h2>
+  <p>For beauty salons, barbershops, spas, and stylists worldwide.</p>
+  <div class="features">
+    ✅ Mobile-first<br>
+    ✅ Elegant layout<br>
+    ✅ Add your own photos & name
+  </div>
+<div class="price">
+  💵 KES 2,500 – 3,500<br>
+  💲 $20 – $28
+</div>
+
+  <button onclick="window.location.href='kinyozipro-demo.html'">Preview + Order</button>
+</div>
+<div class="card">
+  <h2>Barbershop / Kinyozi</h2>
+  <p>Clean, bold, mobile website for barbers & grooming shops.</p>
+  <div class="features">
+    ✅ Fast, modern layout<br>
+    ✅ WhatsApp booking<br>
+    ✅ Custom branding
+  </div>
+
+  <div class="price">
+  💵 KES 2,000 – 3,000<br>
+  💲 $16 – $24
+</div>
+
+  <button onclick="window.location.href='kinyozipro-demo.html'">Preview + Order</button>
+</div>
+
+
+<div class="card">
+  <h2>Restaurant & Food</h2>
+  <p>Websites for restaurants, cafés, fast food, bakers, and more.</p>
+  <div class="features">
+    🍽️ Dine-in<br>
+    🛵 Takeaway<br>
+    📲 WhatsApp orders
+  </div>
+
+  <div class="price">
+  💵 KES 3,500 – 5,000<br>
+  💲 $28 – $40
+</div>
+
+  <button onclick="window.location.href='food-category.html'">Explore Sites</button>
+</div>
+
+<div class="card">
+  <h2>Real Estate (CasaLink v2)</h2>
+  <p>Global-ready real estate site for sellers, agents, and property dealers.</p>
+  <div class="features">
+    🏡 Villa, rental & land listings<br>
+    📸 Image gallery<br>
+    📲 WhatsApp contact
+  </div>
+
+  <div class="price">
+  💵 KES 4,000 – 6,000<br>
+  💲 $32 – $48
+</div>
+
+  <button onclick="window.location.href='casalink-v2.html'">Preview + Order</button>
+</div>
+<div class="card">
+  <h2>Photography Portfolio (SnapVision)</h2>
+  <p>Clean, modern site for photographers and creators.</p>
+  <div class="features">
+    ✅ Image grid<br>
+    ✅ Booking CTA<br>
+    ✅ Fully mobile
+  </div>
+
+  <div class="price">
+  💵 KES 2,500 – 4,000<br>
+  💲 $20 – $32
+</div>
+
+  <button onclick="window.location.href='snapvision.html'">Preview + Order</button>
+</div>
+
+<div class="card">
+  <h2>Tech & Gadget Repair (FixItPro)</h2>
+  <p>For phone, laptop, and electronics repair shops. Clean and global.</p>
+  <div class="features">
+    ✅ Service pages<br>
+    ✅ WhatsApp orders<br>
+    ✅ Mobile-first
+  </div>
+
+  <div class="price">
+  💵 KES 2,500 – 4,000<br>
+  💲 $20 – $32
+</div>
+
+  <button onclick="window.location.href='fixitpro.html'">Preview + Order</button>
+</div>
+
+<div class="card">
+  <h2>Hardware & Tools (ToolHaus)</h2>
+  <p>Perfect for cement shops, paint stores, tool sellers, and hardware dealers.</p>
+  <div class="features">
+    🔨 Product cards<br>
+    📲 WhatsApp orders<br>
+    ⚡ Mobile-ready
+  </div>
+
+  <div class="price">
+  💵 KES 2,800 – 4,500<br>
+  💲 $22 – $36
+</div>
+
+  <button onclick="window.location.href='toolhaus.html'">Preview + Order</button>
+</div>
+
+
+    <div class="card">
+      <h2>Online Store</h2>
+      <p>For clothing shops, cosmetics, and digital stores.</p>
+      <div class="features">
+        ✅ Product grid<br>
+        ✅ Add to cart ready<br>
+        ✅ Country custom pricing
+      </div>
+      <button disabled>Coming Soon</button>
+    </div>
+
+    <div class="card">
+      <h2>School / Academy</h2>
+      <p>Perfect for schools, colleges, or training centers.</p>
+      <div class="features">
+        ✅ Course pages<br>
+        ✅ Application forms<br>
+        ✅ Staff profiles
+      </div>
+      <button disabled>Coming Soon</button>
+    </div>
+
+    <div class="card">
+      <h2>Events & Entertainment</h2>
+      <p>For DJs, events planners, and music crews.</p>
+      <div class="features">
+        ✅ Showcase videos<br>
+        ✅ Booking contact<br>
+        ✅ Social links
+      </div>
+      <button disabled>Coming Soon</button>
+    </div>
+
+    <div class="card">
+      <h2>Custom Business</h2>
+      <p>Got a different idea? Request your own style.</p>
+      <div class="features">
+        ✅ Any business type<br>
+        ✅ Any country<br>
+        ✅ Fast delivery
+      </div>
+<button onclick="window.location.href='https://wa.me/254721635810?text=Hi%20EchoLearn%2C%20I%20want%20a%20custom%20business%20website.'">Request Yours</button>
+
+  </section>
+
+<button id="scrollTopBtn" title="Go to top" style="
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 1000;
+  background: #58a6ff;
+  color: #0d1117;
+  font-family: 'Fira Code';
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease;
+">
+  ⬆️ Top
+</button>
+
+
+<footer>
+  <div style="max-width: 900px; margin: auto; padding: 2rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+
+    <div>
+      <h3 style="color: #58a6ff; font-size: 1.1rem; margin-bottom: 0.5rem;">📞 Contact Us</h3>
+      <p style="margin: 0.3rem 0;">WhatsApp: <a href="https://wa.me/254721635810" style="color:#9fef00; text-decoration:none;">+254 721 635 810</a></p>
+      <p style="margin: 0.3rem 0;">Email: <a href="mailto:echoworld@gmail.com" style="color:#9fef00; text-decoration:none;">echoworld@gmail.com</a></p>
+      <p style="margin: 0.3rem 0;">
+  Want edits? <strong>We customize for you.</strong><br>
+  Need control? <strong>You get the code too.</strong>
+</p>
+
+    </div>
+
+    <div>
+      <h3 style="color: #58a6ff; font-size: 1.1rem; margin-bottom: 0.5rem;">🔍 About EchoLearn</h3>
+      <p style="font-size: 0.9rem; color: #8b949e;">
+        We build ready-made, powerful business websites you can customize and own. Global style. Local speed.
+      </p>
+    </div>
+    <div>
+  <h3 style="color: #58a6ff; font-size: 1.1rem; margin-bottom: 0.5rem;">🛡️ Legal</h3>
+  <p style="margin: 0.3rem 0;">
+    <a href="@privacy.html" style="color:#9fef00; text-decoration: none; font-weight: 500;">🔐 Privacy Policy</a>
+  </p>
+  <p style="margin: 0.3rem 0;">
+    <a href="@terms.html" style="color:#9fef00; text-decoration: none; font-weight: 500;">📜 Terms of Use</a>
+  </p>
+</div>
+
+
+    
+  </div>
+
+  <div style="text-align: center; font-size: 0.85rem; color: #8b949e; margin-top: 2rem;">
+    Built by EchoLearn · Global Sites. Local Power.
+  </div>
+</footer>
+
+
+<script>
+  const searchInput = document.getElementById('searchBox');
+  const cards = document.querySelectorAll('.card');
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      if (text.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+<script>
+  const toggleBtn = document.getElementById("toggleHowItWorks");
+  const howItWorks = document.getElementById("howItWorksContent");
+
+  toggleBtn.addEventListener("click", () => {
+    const isHidden = howItWorks.style.display === "none";
+    howItWorks.style.display = isHidden ? "block" : "none";
+    toggleBtn.innerText = isHidden ? "🔼 Hide Steps" : "🔽 Show Steps";
+
+    if (isHidden) {
+      howItWorks.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+
+  // Theme toggle logic
+  const themeToggle = document.getElementById("themeToggle");
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+    themeToggle.innerText = document.body.classList.contains("light-theme") ? "🌙 Dark Mode" : "☀️ Light Mode";
+  });
+  // Scroll to Top Button Logic
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+scrollTopBtn.onclick = function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+</script>
+
+
+</body>
+
+
+</html>

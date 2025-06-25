@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FixItPro | Repair Website</title>
+  <meta name="description" content="Tech & electronics repair business website. Built for global phone, laptop and gadget shops.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Fira Code', monospace;
+      background: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+      background: #161b22;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #8b949e;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #58a6ff;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: #161b22;
+      padding: 1.5rem;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .feature-card:hover {
+      border-color: #58a6ff;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 0.5rem;
+      color: #d2a8ff;
+    }
+
+    .sample-services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .service img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .service h4 {
+      margin-bottom: 0.3rem;
+      color: #c9d1d9;
+    }
+
+    .about {
+      background: #161b22;
+      padding: 2rem;
+      border-left: 4px solid #58a6ff;
+      border-radius: 8px;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .cta a {
+      background: #58a6ff;
+      color: #0d1117;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background: #1f6feb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #8b949e;
+      background: #0d1117;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .cta a {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FixItPro</h1>
+    <p>Your Gadget Doctor. We Fix, You Relax.</p>
+  </header>
+
+  <section>
+    <h2>📦 Our Repair Services</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>📱 Phone Repairs</h3>
+        <p>Broken screen? Water damage? Battery issues? We got you.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💻 Laptop Fixes</h3>
+        <p>Keyboard not working? Overheating? OS crash? Bring it in.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔌 Charger Ports</h3>
+        <p>We replace dead charging ports & power circuits fast.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🧠 Free Diagnosis</h3>
+        <p>Not sure what’s wrong? Walk in & get checked for free.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🛠️ Sample Repairs</h2>
+    <div class="sample-services">
+      <div class="service">
+        <img src="https://source.unsplash.com/80x80/?phone,repair" alt="Phone Repair" />
+        <h4>iPhone 11 Screen</h4>
+        <p>KES 6,500 · 1hr</p>
+      </div>
+      <div class="service">
+        <img src="https://source.unsplash.com/80x80/?laptop,fix" alt="Laptop Fix" />
+        <h4>HP Keyboard + Clean</h4>
+        <p>KES 2,800 · Same Day</p>
+      </div>
+      <div class="service">
+        <img src="https://source.unsplash.com/80x80/?tools,repair" alt="Solder" />
+        <h4>Charging Port</h4>
+        <p>KES 1,200 · 30min</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>💡 About FixItPro</h2>
+    <div class="about">
+      <p>
+        FixItPro is your one-stop gadget repair site. Whether you're a technician looking to promote your shop, or a startup running doorstep repair — this site gives you credibility, contactability, and speed. Add your name, pics, and location — and start fixing.
+      </p>
+    </div>
+
+    <div class="cta">
+      <a href="https://wa.me/254721635810?text=Hi%20EchoLearn%2C%20I'm%20interested%20in%20the%20FixItPro%20repair%20website.">✅ Buy This Website</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 FixItPro · Built by EchoLearn Systems
+  </footer>
+
+</body>
+</html>
+

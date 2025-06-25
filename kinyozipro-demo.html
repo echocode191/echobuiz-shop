@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KinyoziPro | Barbershop Website Demo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background: #f5f5f5;
+      color: #111;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1f1f1f, #444);
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.75rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #1f1f1f;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #111;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .services, .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta a {
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #333;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .cta a {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>KinyoziPro</h1>
+    <p>Sharp. Fast. Clean. The Barbershop Website You Need.</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services">
+    <h2>✂️ Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Classic Haircut</h3>
+        <p>Professional fades, tapers & trims.</p>
+      </div>
+      <div class="card">
+        <h3>Shaving & Beard Trim</h3>
+        <p>Line-ups, shape-ups, beard grooming.</p>
+      </div>
+      <div class="card">
+        <h3>Dye & Styling</h3>
+        <p>Custom hair dye, gels, sponge styling.</p>
+      </div>
+      <div class="card">
+        <h3>Kids Haircuts</h3>
+        <p>Friendly & fast for young stars.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>📸 Gallery</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?barber,fade" alt="Barber 1"/>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?haircut,shave" alt="Barber 2"/>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?barbershop,style" alt="Barber 3"/>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?grooming,men" alt="Barber 4"/>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📞 Book Now</h2>
+    <div class="contact">
+      <div class="card">
+        <h3>📍 Location</h3>
+        <p>1st Avenue, Next to Fuel Station<br>Any Town</p>
+      </div>
+      <div class="card">
+        <h3>📱 WhatsApp</h3>
+        <p><a href="https://wa.me/254721635810" target="_blank">Click to Chat</a></p>
+      </div>
+      <div class="card">
+        <h3>📧 Email</h3>
+        <p>book@kinyozipro.com</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="https://wa.me/254721635810?text=Hi%20EchoLearn%2C%20I%20want%20the%20KinyoziPro%20website%20for%20my%20barbershop." target="_blank">✅ Get This Website</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 KinyoziPro · Demo by EchoLearn.
+  </footer>
+
+</body>
+</html>

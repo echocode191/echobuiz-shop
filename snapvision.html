@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SnapVision | Photographer Portfolio</title>
+  <meta name="description" content="A clean, fast photography portfolio website. Show your work, share your story, and book clients.">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background: #f9f9f9;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0a0f2e;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: #ffd700;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #0a0f2e;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .category-card {
+      background: white;
+      border: 2px solid #eee;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .category-card:hover {
+      border-color: #ffd700;
+      transform: translateY(-3px);
+    }
+
+    .category-card h3 {
+      margin-bottom: 0.3rem;
+      color: #0a0f2e;
+    }
+
+    .about {
+      background: #fff;
+      border-left: 4px solid #ffd700;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .cta a {
+      background: #0a0f2e;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #222c5f;
+    }
+
+    footer {
+      background: #0a0f2e;
+      color: #bbb;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .cta a { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SnapVision</h1>
+    <p>Capture Moments. Tell Stories. Get Booked.</p>
+  </header>
+
+  <section>
+    <h2>🎯 My Specialties</h2>
+    <div class="categories">
+      <div class="category-card">
+        <h3>Weddings</h3>
+        <p>Timeless love stories and raw emotion.</p>
+      </div>
+      <div class="category-card">
+        <h3>Portraits</h3>
+        <p>Styled, raw, personal, bold. Always you.</p>
+      </div>
+      <div class="category-card">
+        <h3>Events</h3>
+        <p>Concerts, birthdays, conferences — captured.</p>
+      </div>
+      <div class="category-card">
+        <h3>Products</h3>
+        <p>Make your brand shine visually.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📸 Sample Work</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/400x400/?wedding,bride" alt="Wedding">
+      <img src="https://source.unsplash.com/400x400/?portrait,woman" alt="Portrait">
+      <img src="https://source.unsplash.com/400x400/?concert,event" alt="Event">
+      <img src="https://source.unsplash.com/400x400/?product,studio" alt="Product">
+      <img src="https://source.unsplash.com/400x400/?photography,man" alt="Photographer">
+      <img src="https://source.unsplash.com/400x400/?camera,lens" alt="Camera">
+    </div>
+  </section>
+
+  <section>
+    <h2>💡 About SnapVision</h2>
+    <div class="about">
+      <p>
+        SnapVision is a premium portfolio site for photographers, storytellers, and visual artists. Built to showcase your best work, attract clients, and simplify bookings. Upload your images, update your bio, and start sending your link proudly.
+      </p>
+    </div>
+
+    <div class="cta">
+      <a href="https://wa.me/254721635810?text=Hi%20EchoLearn%2C%20I'm%20interested%20in%20the%20SnapVision%20photography%20portfolio%20website.">📲 Get This Website</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 SnapVision · Built by EchoLearn Studios
+  </footer>
+
+</body>
+</html>
