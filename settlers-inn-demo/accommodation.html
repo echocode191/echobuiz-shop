@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settlers Inn | Accommodations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+    header {
+      background: #161b22;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #30363d;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand img {
+      height: 45px;
+      margin-right: 0.8rem;
+    }
+
+    .brand h1 {
+      font-size: 1.3rem;
+      color: #9fef00;
+      margin: 0;
+    }
+
+    .hero {
+      background: url('assets/room.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #c9d1d9;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content h2 {
+      font-size: 2.2rem;
+      color: #9fef00;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .room {
+      border: 1px solid #30363d;
+      background: rgba(255,255,255,0.03);
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+    }
+
+    .room h3 {
+      color: #58a6ff;
+    }
+
+    .room p {
+      color: #8b949e;
+    }
+
+    .amenities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .amenities span {
+      background: #161b22;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      color: #9fef00;
+    }
+
+    .book-btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      background: #58a6ff;
+      color: #0d1117;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background: #1f6feb;
+    }
+
+    footer {
+      background: #161b22;
+      text-align: center;
+      color: #8b949e;
+      padding: 2rem 1rem;
+      border-top: 1px solid #30363d;
+    }
+    .book-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  background: #58a6ff;
+  color: #0d1117;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Fira Code', monospace;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
+}
+
+.book-btn:hover {
+  background: #1f6feb;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(88, 166, 255, 0.25);
+}
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="assets/logo.png" alt="Settlers Inn Logo" />
+    <h1>Settlers Inn</h1>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>🛏️ Our Rooms</h2>
+    <p>Clean, cozy & crafted for rest. Settle in comfortably.</p>
+  </div>
+</section>
+<section id="book-room" style="margin: 3rem auto; max-width: 600px; background: #161b22; padding: 2rem; border-radius: 12px; box-shadow: 0 0 15px rgba(88,166,255,0.1); animation: fadeInUp 1.4s ease-out;">
+  <h2 style="color: #9fef00; text-align: center; font-size: 1.4rem;">🛏️ Book a Room Instantly</h2>
+  <p style="text-align:center; color: #8b949e;">Choose your preferred room and confirm via WhatsApp.</p>
+  <form onsubmit="sendRoomBooking(); return false;" style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap;">
+    <select id="roomType" required style="padding: 0.6rem 1rem; font-family: 'Fira Code'; border: 1px solid #30363d; border-radius: 8px; background: #0d1117; color: #c9d1d9; flex: 1;">
+      <option disabled selected>Select Room Type</option>
+      <option value="Single Room">Single Room</option>
+      <option value="Double Room">Double Room</option>
+      <option value="Family Cottage">Family Cottage</option>
+    </select>
+   <button type="submit" class="book-btn">📲 WhatsApp Us</button>
+
+  </form>
+</section>
+
+<script>
+  function sendRoomBooking() {
+    const room = document.getElementById('roomType').value;
+   const message = `Hi Settlers Inn 👋, I’m interested in booking a *${room}*. Could you please confirm availability and price?`;
+
+    const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+<section>
+  <div class="room">
+    <h3>Single Room</h3>
+    <p>Perfect for solo travelers or quick stopovers. Comes with a comfy bed, private bathroom, and breakfast included.</p>
+    <div class="amenities">
+      <span>Free Wi-Fi</span>
+      <span>Hot Shower</span>
+      <span>Breakfast</span>
+      <span>Secure Parking</span>
+    </div>
+   <a href="https://wa.me/254748778388?text=Hi%20Settlers%20Inn%20👋%2C%20I’m%20interested%20in%20booking%20a%20*Single%20Room*.%20Could%20you%20please%20confirm%20availability%20and%20price%3F" class="book-btn">📲 Book Single Room</a>
+
+  </div>
+
+  <div class="room">
+    <h3>Double Room</h3>
+    <p>Ideal for couples or friends. Includes a larger bed or twin beds, extra towels, and a serene highlands view.</p>
+    <div class="amenities">
+      <span>Highlands View</span>
+      <span>Wi-Fi</span>
+      <span>Room Service</span>
+      <span>Free Breakfast</span>
+    </div>
+ <a href="https://wa.me/254748778388?text=Hi%20Settlers%20Inn%20👋%2C%20I’m%20interested%20in%20booking%20a%20*Double%20Room*.%20Could%20you%20please%20confirm%20availability%20and%20price%3F" class="book-btn">📲 Book Double Room</a>
+
+  </div>
+
+  <div class="room">
+    <h3>Executive Room</h3>
+    <p>Spacious, elegant and perfect for business or luxury travelers. Enjoy extra space, premium linen, and VIP treatment.</p>
+    <div class="amenities">
+      <span>Private Balcony</span>
+      <span>Smart TV</span>
+      <span>Workspace</span>
+      <span>Power Backup</span>
+    </div>
+   <a href="https://wa.me/254748778388?text=Hi%20Settlers%20Inn%20👋%2C%20I’m%20interested%20in%20booking%20the%20*Executive%20Room*.%20Could%20you%20share%20more%20details%20and%20availability%3F" class="book-btn">📲 Book Executive Room</a>
+
+  </div>
+</section>
+
+<footer>
+  Settlers Inn · Kenya Highlands<br>
+  © 2025. Built with ❤️ by EchoBiz.
+</footer>
+
+</body>
+</html>
