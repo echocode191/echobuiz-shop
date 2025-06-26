@@ -471,59 +471,8 @@ footer p {
       <p>Rich aroma, bold flavor. Served hot or iced.</p>
     </div>
   </div>
+  </--
 </section>
-<section id="quick-actions" style="margin: 4rem auto; max-width: 800px; background: #161b22; padding: 2.5rem 2rem; border-radius: 14px; box-shadow: 0 0 20px rgba(88,166,255,0.1); animation: fadeInUp 1.5s ease-out;">
-  <h2 style="color: #9fef00; text-align: center; font-size: 1.6rem;">⚡ Quick Actions</h2>
-  <p style="text-align:center; color: #8b949e; margin-bottom: 2rem;">Book a meal or a room instantly via WhatsApp. Just fill and send — zero stress.</p>
-
-  <!-- 🍽️ Food Order Form -->
-  <div style="margin-bottom: 2rem;">
-    <h3 style="color: #58a6ff; font-size: 1.2rem; text-align:center;">🍽️ Order Food</h3>
-  <form onsubmit="return sendQuickFoodOrder(event);" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
-      <input type="text" id="quickFoodName" placeholder="e.g. Chapati & Beans" required style="padding: 0.6rem 1rem; font-family: 'Fira Code'; border: 1px solid #30363d; border-radius: 8px; background: #0d1117; color: #c9d1d9; flex: 1; min-width: 200px;">
-      <button type="submit" style="padding: 0.6rem 1.2rem; background: #9fef00; color: #0d1117; border: none; border-radius: 8px; font-family: 'Fira Code'; cursor: pointer;">Send</button>
-    </form>
-  </div>
-
-  <!-- 🛏️ Room Booking Form -->
-  <div>
-    <h3 style="color: #58a6ff; font-size: 1.2rem; text-align:center;">🛏️ Book a Room</h3>
-  <form onsubmit="sendRoomBooking(); return false;" style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap;">
-    <select id="roomType" required style="padding: 0.6rem 1rem; font-family: 'Fira Code'; border: 1px solid #30363d; border-radius: 8px; background: #0d1117; color: #c9d1d9; flex: 1;">
-      <option disabled selected>Select Room Type</option>
-      <option value="Single Room">Single Room</option>
-      <option value="Double Room">Double Room</option>
-      <option value="Family Cottage">conference hall</option>
-    </select>
-   <button type="submit" class="book-btn">📲 WhatsApp Us</button>
-
-  </form>
-  </div>
-</section>
-  
-<script>
-  function sendRoomBooking() {
-    const room = document.getElementById('roomType').value;
-   const message = `Hi Settlers Inn 👋, I’m interested in booking a *${room}*. Could you please confirm availability and price?`;
-
-    const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-  }
-</script>
-  <script>
-    function toggleMenu() {
-      document.getElementById('navbar').classList.toggle('active');
-    }
-
-    function sendFoodOrder() {
-      const food = document.getElementById('foodName').value.trim();
-      if (!food) return;
-      const msg = `Hi Settlers Inn, I want to order: ${food}`;
-      const link = `https://wa.me/254748778388?text=${encodeURIComponent(msg)}`;
-      window.open(link, '_blank');
-    }
-  </script>
-
 <section class="reviews">
   <h2>💬 What People Are Saying</h2>
   <div class="review-grid">
