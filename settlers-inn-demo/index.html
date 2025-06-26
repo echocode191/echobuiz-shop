@@ -416,7 +416,8 @@ footer p {
     <img src="assets/logo.png" alt="Settlers Inn Logo" />
     <h1>Settlers Inn</h1>
   </div>
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
+
 <nav id="navbar">
   <a href="index.html">Home</a>
   <a href="menu.html">Menu</a>
@@ -426,6 +427,7 @@ footer p {
   <a href="location.html">📍 Location</a>
   <a href="contact.html">Contact</a>
 </nav>
+
 
 
 </header>
@@ -515,6 +517,8 @@ footer p {
       <span>— Jane M.</span>
     </div>
   </div>
+  <div id="fb-root"></div>
+
   <section style="margin: 4rem auto; max-width: 800px; padding: 2rem 1rem; border-top: 1px solid #30363d;">
   <h2 style="color: #58a6ff; text-align: center;">💬 Facebook Reviews (Live)</h2>
   <div style="display: flex; justify-content: center;">
@@ -733,20 +737,19 @@ footer p {
 
 <script>
   function sendQuickFoodOrder() {
-    const food = document.getElementById('quickFoodName').value;
-    const message = `Hi Settlers Inn 👋, I’d like to order: ${food}`;
-    const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-  }
+  const food = document.getElementById('quickFoodName').value;
+  const message = `Hi Settlers Inn 👋, I’d like to order: ${food}`;
+  const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
+  window.location.href = url; // 👈 safer redirect
+}
 
-  function sendQuickRoomBooking() {
-    const room = document.getElementById('quickRoomType').value;
-    const message = `Hi Settlers Inn 👋, I’d like to book a ${room}`;
-    const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-  }
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" 
+function sendQuickRoomBooking() {
+  const room = document.getElementById('quickRoomType').value;
+  const message = `Hi Settlers Inn 👋, I’d like to book a ${room}`;
+  const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
+  window.location.href = url; // 👈 safer redirect
+}
+  <script async defer crossorigin="anonymous" 
   src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" 
   nonce="fbReviews">
 </script>
