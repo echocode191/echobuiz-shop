@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Us | Settlers Inn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+
+    header {
+      background: #161b22;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #30363d;
+    }
+
+    header h1 {
+      color: #9fef00;
+      font-size: 1.3rem;
+    }
+
+    nav a {
+      color: #58a6ff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #1f6feb;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+    }
+
+    .hero h2 {
+      color: #9fef00;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      color: #8b949e;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .map-container {
+      max-width: 900px;
+      margin: auto;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(88,166,255,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem auto;
+      flex-wrap: wrap;
+    }
+
+    .actions a {
+      padding: 0.8rem 1.4rem;
+      background: #58a6ff;
+      color: #0d1117;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      font-weight: bold;
+    }
+
+    .actions a:hover {
+      background: #1f6feb;
+      transform: scale(1.05);
+    }
+
+    .actions a.whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .actions a.whatsapp:hover {
+      background: #1ebe57;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #8b949e;
+      border-top: 1px solid #30363d;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Settlers Inn</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="accommodation.html">Stay</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="location.html">Find Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>📍 Our Location</h2>
+    <p>We’re tucked away in the beautiful Kenya Highlands. Come find your peace.</p>
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.1089110590363!2d35.2794369!3d-0.5019141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182ba9c43b1f6f1d%3A0xd2cfbe08f96a1f79!2sSettlers%20Inn!5e0!3m2!1sen!2ske!4v1689948372724!5m2!1sen!2ske"
+    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+
+    <div class="actions">
+      <a href="tel:0748778388">📞 Call Us</a>
+<a 
+  href="https://wa.me/254748778388?text=Hi%20Settlers%20Inn%20👋%2C%20could%20you%20please%20send%20me%20directions%20to%20your%20place%3F" 
+  class="whatsapp"
+  target="_blank"
+>
+  💬 WhatsApp Directions
+</a>
+
+      <a href="https://maps.app.goo.gl/4V42cGSvm2bvzsFX8" target="_blank">🧭 Open in Google Maps</a>
+
+    </div>
+  </section>
+
+  <footer>
+    Settlers Inn · Real food. Real people.<br>
+    Built by EchoBiz · <a href="https://wa.me/254721635810?text=Hi%20EchoBiz%2C%20I%20like%20the%20Settlers%20site.%20Can%20you%20make%20one%20for%20me%3F" style="color:#58a6ff;">💻 Let’s Build Yours</a>
+  </footer>
+
+</body>
+</html>
