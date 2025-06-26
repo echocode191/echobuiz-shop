@@ -6,19 +6,17 @@
   <title>Menu | Settlers Inn</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Fira Code', monospace;
       background-color: #0d1117;
       color: #c9d1d9;
     }
+
     header {
       background: #161b22;
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -27,46 +25,148 @@
       top: 0;
       z-index: 100;
     }
+
     header h1 {
       color: #9fef00;
       font-size: 1.3rem;
     }
+
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: #58a6ff;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
     nav a {
       color: #58a6ff;
-      margin-left: 1rem;
       text-decoration: none;
       font-size: 0.95rem;
     }
+
     nav a:hover {
+      color: #1f6feb;
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .menu-btn { display: block; }
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0d1117;
+        padding: 1rem;
+      }
+      nav.active { display: flex; }
+      nav a { padding: 0.5rem 0; }
+    }
+
     section {
       max-width: 800px;
       margin: auto;
       padding: 2rem 1rem;
     }
+
     h2 {
       text-align: center;
       color: #58a6ff;
       margin-bottom: 2rem;
     }
+
     .category {
       margin-bottom: 2rem;
     }
+
     .category h3 {
       color: #9fef00;
       margin-bottom: 0.5rem;
       border-bottom: 1px solid #30363d;
       padding-bottom: 0.3rem;
     }
+
     .item {
       display: flex;
       justify-content: space-between;
       margin-bottom: 0.5rem;
     }
-    .item p {
-      margin: 0;
+
+    .item p { margin: 0; }
+
+    .order-section {
+      background: #161b22;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 3rem auto;
+      box-shadow: 0 0 15px rgba(88,166,255,0.1);
     }
+
+    .order-section input {
+      padding: 0.6rem 1rem;
+      font-family: 'Fira Code';
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      color: #c9d1d9;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .order-section button {
+      padding: 0.6rem 1.2rem;
+      background: #9fef00;
+      color: #0d1117;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Fira Code';
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .order-section button:hover {
+      background: #b8ff40;
+    }
+
+    .order-section form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .section-nav {
+      display: flex;
+      justify-content: space-between;
+      background: #161b22;
+      padding: 1rem;
+      border-top: 1px solid #30363d;
+      border-bottom: 1px solid #30363d;
+      font-size: 0.9rem;
+      color: #8b949e;
+      margin-top: 3rem;
+    }
+
+    .section-nav a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .section-nav a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -75,26 +175,26 @@
       border-top: 1px solid #30363d;
       margin-top: 3rem;
     }
-    .section-nav {
-  display: flex;
-  justify-content: space-between;
-  background: #161b22;
-  padding: 1rem;
-  border-top: 1px solid #30363d;
-  border-bottom: 1px solid #30363d;
-  font-size: 0.9rem;
-  color: #8b949e;
-  margin-top: 3rem;
-}
 
-.section-nav a {
-  color: #58a6ff;
-  text-decoration: none;
-}
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      font-size: 1.6rem;
+      padding: 0.6rem 0.8rem;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 999;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
 
-.section-nav a:hover {
-  text-decoration: underline;
-}
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
 
   </style>
 </head>
@@ -102,44 +202,84 @@
 
   <header>
     <h1>Settlers Inn</h1>
-    <nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav id="navbar">
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
+      <a href="accommodation.html">Stay</a>
       <a href="about.html">About</a>
       <a href="gallery.html">Gallery</a>
+      <a href="location.html">Location</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <div class="section-nav">
-  <a href="index.html">← Back to Home</a>
-  <a href="about.html">Next → About Us</a>
-</div>
+    <a href="index.html">← Back to Home</a>
+    <a href="about.html">Next → About Us</a>
+  </div>
 
+  <section class="order-section" id="order-food">
+    <h2>🍛 Order Food Instantly</h2>
+    <p style="text-align:center; color: #8b949e;">Enter your favorite dish and order via WhatsApp. We'll reply fast!</p>
+    <form onsubmit="sendFoodOrder(); return false;">
+      <input type="text" id="foodName" placeholder="e.g. Ugali & Fish" required>
+      <button type="submit">📲 WhatsApp Us</button>
+    </form>
+  </section>
 
   <section>
     <h2>🍽️ Our Menu</h2>
 
     <div class="category">
       <h3>🌅 Breakfast</h3>
-      <div class="item">
-        <p>Highland Breakfast (eggs, toast, sausage)</p>
-        <p>KES 450</p>
-      </div>
-      <div class="item">
-        <p>Porridge with Sweet Potatoes</p>
-        <p>KES 300</p>
-      </div>
+      <div class="item"><p>Highland Breakfast (eggs, toast, sausage)</p><p>KES 450</p></div>
+      <div class="item"><p>Porridge with Sweet Potatoes</p><p>KES 300</p></div>
     </div>
 
     <div class="category">
       <h3>🍛 Lunch</h3>
-      <div class="item">
-        <p>Grilled Steak with Fries</p>
-        <p>KES 850</p>
-      </div>
-      <div class="item">
-        <p>Beef Stew + Rice</p>
-        <p>KES 700</p>
-      </div>
-      <div class="
+      <div class="item"><p>Grilled Steak with Fries</p><p>KES 850</p></div>
+      <div class="item"><p>Beef Stew + Rice</p><p>KES 700</p></div>
+      <div class="item"><p>Ugali & Fish</p><p>KES 750</p></div>
+    </div>
+
+    <div class="category">
+      <h3>🌇 Dinner</h3>
+      <div class="item"><p>Chicken Stir Fry</p><p>KES 800</p></div>
+      <div class="item"><p>Nyama Choma (per plate)</p><p>KES 950</p></div>
+    </div>
+
+    <div class="category">
+      <h3>🍹 Drinks</h3>
+      <div class="item"><p>Fresh Passion Juice</p><p>KES 200</p></div>
+      <div class="item"><p>Chai ya Maziwa</p><p>KES 100</p></div>
+      <div class="item"><p>Kenyan Coffee</p><p>KES 180</p></div>
+    </div>
+  </section>
+
+  <!-- WhatsApp floating button -->
+  <a class="whatsapp-float" href="https://wa.me/254748778388?text=Hi%20Settlers%20Inn%2C%20I%20want%20to%20order%20food" target="_blank" title="Order on WhatsApp">💬</a>
+
+  <footer>
+    Settlers Inn · Real food. Real people.<br>
+    Built by EchoBiz · 
+    <a href="https://wa.me/254721635810?text=Hi%20EchoBiz%2C%20I%20saw%20Settlers%20Inn%20website%20and%20I'm%20interested." style="color:#58a6ff;" target="_blank">📲 Contact EchoBiz</a>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('active');
+    }
+
+    function sendFoodOrder() {
+      const food = document.getElementById('foodName').value.trim();
+      if (!food) return;
+      const msg = `Hi Settlers Inn, I want to order: ${food}`;
+      const link = `https://wa.me/254748778388?text=${encodeURIComponent(msg)}`;
+      window.open(link, '_blank');
+    }
+  </script>
+
+</body>
+</html>
