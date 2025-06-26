@@ -139,8 +139,19 @@ body.light-theme footer {
 
   </style>
   <p><a href="https://echolearn-web.netlify.app" style="color:#58a6ff;">← Back to EchoLearn</a></p>
+<link rel="manifest" href="manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/settlers-inn-demo/service-worker.js')
+        .then(reg => console.log('✅ Service Worker registered'))
+        .catch(err => console.error('❌ SW registration failed', err));
+    });
+  }
+</script>
 
 </head>
+
 <section style="text-align: center; margin-top: 1rem;">
   <input id="searchBox" type="text" placeholder="🔍 Search business sites..." 
     style="width: 90%; max-width: 400px; padding: 0.6rem 1rem; font-family: 'Fira Code'; border-radius: 8px; border: 1px solid #30363d; background: #161b22; color: #c9d1d9;">
