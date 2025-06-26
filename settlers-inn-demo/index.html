@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settlers Inn | Where Settlers Still Eat Like Kings</title>
+  <meta name="description" content="Welcome to Settlers Inn, a family-owned restaurant in the heart of the Kenya Highlands. Good food. Real people." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  height: 45px;
+  margin-right: 0.8rem;
+}
+
+.brand h1 {
+  font-size: 1.3rem;
+  color: #9fef00;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #1f6feb;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #58a6ff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  nav.active {
+    display: flex;
+  }
+  nav a {
+    padding: 0.5rem 0;
+  }
+  header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  background: linear-gradient(145deg, #0d1117, #161b22);
+  animation: fadeInUp 1s ease-out forwards;
+}
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #9fef00;
+}
+.hero p {
+  color: #8b949e;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+.hero button {
+  background: #58a6ff;
+  color: #0d1117;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(88,166,255,0.2);
+}
+.hero button:hover {
+  background: #1f6feb;
+  box-shadow: 0 0 16px rgba(88,166,255,0.4);
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1rem;
+  color: #8b949e;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+.dish {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.dish img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.dish h3 {
+  color: #9fef00;
+  margin-top: 0.8rem;
+}
+.dish:hover {
+  transform: translateY(-6px);
+  border-color: #58a6ff;
+  box-shadow: 0 6px 18px rgba(88,166,255,0.1);
+}
+
+.quick-access {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  display: flex;
+  gap: 1.2rem;
+  z-index: 999;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+.quick-access a {
+  color: #9fef00;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .quick-access {
+    display: none;
+  }
+}
+
+footer {
+  background: linear-gradient(to right, #161b22, #0d1117);
+  border-top: 1px solid #30363d;
+  padding: 2.5rem 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #8b949e;
+}
+footer a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.reviews {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #0d1117;
+  animation: fadeInUp 1.6s ease-out;
+}
+.reviews h2 {
+  font-size: 1.5rem;
+  color: #58a6ff;
+  margin-bottom: 2rem;
+}
+.review-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  max-width: 900px;
+  margin: auto;
+}
+.review {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #30363d;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+.review p {
+  color: #c9d1d9;
+  margin-bottom: 0.5rem;
+}
+.review span {
+  color: #9fef00;
+  font-size: 0.85rem;
+}
+
+
+  </style>
+</head>
+
+<header>
+  <div class="brand">
+    <img src="assets/logo.png" alt="Settlers Inn Logo">
+    <h1>Settlers Inn</h1>
+  </div>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <section class="hero">
+    <h2>Welcome to Settlers Inn</h2>
+    <p>Where Settlers Still Eat Like Kings</p>
+    <button onclick="window.location.href='menu.html'">🍽️ View Our Menu</button>
+  </section>
+
+  <section>
+    <div class="intro">
+      <p>Located in the heart of the Kenya Highlands, Settlers Inn is a family-owned gem serving authentic dishes, hearty portions, and warm hospitality. Whether you're just passing through or staying for a while — we serve food that feels like home.</p>
+    </div>
+<div class="featured">
+  <div class="dish">
+    <img src="assets/tea.jpg" alt="Hot Kenyan Tea" />
+    <h3>☕ Hot Kenyan Tea</h3>
+    <p>Strong, smooth, and served the local way.</p>
+  </div>
+
+  <div class="dish">
+    <img src="assets/chapatis.jpg" alt="Rolled Chapatis" />
+    <h3>🥙 Rolled Chapatis</h3>
+    <p>Freshly made, soft, and golden brown.</p>
+  </div>
+
+  <div class="dish">
+    <img src="assets/ugali-fish.jpg" alt="Ugali, Fish & Greens" />
+    <h3>🍛 Ugali, Fish & Greens</h3>
+    <p>A classic plate done Settlers-style — hearty & clean.</p>
+  </div>
+
+  <div class="dish">
+    <img src="assets/room.jpg" alt="Accomodation Room" />
+    <h3>🛏️ Rooms Available</h3>
+    <p>Cozy, clean, and perfect for stopovers or weekend stays.</p>
+  </div>
+
+  <div class="dish">
+    <img src="assets/coffee.jpg" alt="Kenyan Coffee" />
+    <h3>☕ Kenyan Coffee</h3>
+    <p>Rich aroma, bold flavor. Served hot or iced.</p>
+  </div>
+</div>
+
+<div class="quick-access">
+  <a href="tel:0748778388">📞</a>
+<a href="https://maps.app.goo.gl/hvW5TubkM8WGcfAs5" target="_blank">🧭</a>
+
+  <a href="gallery.html">📷</a>
+  <a href="menu.html">🥘</a>
+  <a href="https://wa.me/254748778388">🟢</a>
+</div>
+
+<section class="reviews">
+  <h2>💬 What People Are Saying</h2>
+  <div class="review-grid">
+    <div class="review">
+      <p>“Best chapatis I’ve had in years. This place feels like home.”</p>
+      <span>— Mercy K.</span>
+    </div>
+    <div class="review">
+      <p>“The tea, the vibe, the rooms — everything’s on point!”</p>
+      <span>— Brian N.</span>
+    </div>
+    <div class="review">
+      <p>“Clean, affordable, and that fish was perfection.”</p>
+      <span>— Jane M.</span>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    Settlers Inn &middot; Kenya Highlands<br>
+    This is a demo site by EchoBiz. Want one like this?<br>
+    <a href="https://wa.me/254721635810?text=Hi%20EchoLearn%2C%20I%20saw%20the%20Settlers%20Inn%20demo%20and%20want%20a%20site%20like%20that." style="color:#58a6ff;">📲 WhatsApp Us</a>
+  </footer>
+<script>
+  function toggleMenu() {
+    document.getElementById('navbar').classList.toggle('active');
+  }
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('Service Worker registered ✅'))
+      .catch(error => console.log('Service Worker failed:', error));
+  }
+</script>
+
+</body>
+</html>
