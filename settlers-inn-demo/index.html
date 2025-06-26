@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
   <meta name="theme-color" content="#58a6ff" />
+  <link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#58a6ff" />
+
+
 
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
@@ -403,16 +407,6 @@ footer p {
 }
 
 </style>
-  <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker
-        .register('serviceWorker.js')
-        .then(reg => console.log('✅ ServiceWorker registered:', reg.scope))
-        .catch(err => console.error('❌ ServiceWorker registration failed:', err));
-    });
-  }
-</script>
 
 </head>
 <body>
@@ -757,6 +751,17 @@ footer p {
   nonce="fbReviews">
 </script>
 
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => {
+        console.log('✅ Service Worker registered:', reg.scope);
+      })
+      .catch(err => {
+        console.error('❌ Service Worker registration failed:', err);
+      });
+  }
+</script>
 
 </body>
 </html>
