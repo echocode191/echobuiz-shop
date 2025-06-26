@@ -182,6 +182,18 @@ body.light-theme footer {
   </div>
 
 </section>
+  <div id="demo-toast" style="position: fixed; top: 1rem; left: 50%; transform: translateX(-50%); background: #58a6ff; color: #0d1117; padding: 0.75rem 1.5rem; border-radius: 999px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); opacity: 0; transition: opacity 0.5s;">
+  ✔️ New demo: Settlers Inn Restaurant – now live!  
+  <a href="settlers-inn/index.html" style="margin-left: 1rem; color: #0d1117; font-weight: bold;">View →</a>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toast = document.getElementById('demo-toast');
+    toast.style.opacity = '1';
+    setTimeout(() => toast.style.opacity = '0', 8000);
+  });
+</script>
+
 
   <header>
     <h1>🌍 EchoBiz Website Shop</h1>
@@ -248,6 +260,24 @@ body.light-theme footer {
       💵 KES 3,500 – 5,000<br>
       💲 $28 – $40
     </div>
+
+    <div class="card">
+  <h2>Settlers Inn (Restaurant)</h2>
+  <p>A full 5‑page restaurant demo — PWA installable, reviews, animations, & offline-ready.</p>
+  <div class="features">
+    ✅ Gallery & Menu<br>
+    ✅ Customer Reviews<br>
+    ✅ PWA Installable<br>
+    ✅ Quick‑access UI
+  </div>
+  <button onclick="window.location.href='settlers-inn/index.html'">
+    Preview Demo
+  </button>
+  <p style="font-size: 0.8rem; color: #9fef00; margin-top: 0.5rem;">
+    Includes full PWA & offline cache
+  </p>
+</div>
+
         
   <button onclick="window.location.href='food-category.html'">Explore Sites</button>
  
