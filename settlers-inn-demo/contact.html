@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Settlers Inn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+    header {
+      background: #161b22;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #30363d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      color: #9fef00;
+      font-size: 1.3rem;
+    }
+    nav a {
+      color: #58a6ff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
+      line-height: 1.6;
+    }
+    h2 {
+      text-align: center;
+      color: #58a6ff;
+      margin-bottom: 2rem;
+    }
+    .contact-details p {
+      margin: 0.8rem 0;
+    }
+    .contact-details a {
+      color: #9fef00;
+      text-decoration: none;
+    }
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      background: #58a6ff;
+      color: #0d1117;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Fira Code';
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background: #1f6feb;
+    }
+    .map-container {
+      margin-top: 2rem;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #8b949e;
+      border-top: 1px solid #30363d;
+      margin-top: 3rem;
+    }
+    .section-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem auto 1rem;
+  max-width: 900px;
+  padding: 1rem;
+  border-top: 1px solid #30363d;
+  border-bottom: 1px solid #30363d;
+}
+
+.section-nav a {
+  font-family: 'Fira Code', monospace;
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.section-nav a:hover {
+  color: #1f6feb;
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Settlers Inn</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+  <div class="section-nav">
+  <a href="gallery.html">← Back to Gallery</a>
+  <a href="index.html">🏠 Home</a>
+</div>
+
+<section>
+  <h2>📍 Find Us</h2>
+
+  <div class="contact-details">
+    <p>📍 <strong>Address:</strong> Londiani - Muhoroni Highway, Kipkelion</p>
+    <p>🕒 <strong>Hours:</strong> Open 24 hours</p>
+    
+  
+    <p>📞 <strong>Phone:</strong> <a href="tel:+254748778388">0748 778388</a></p>
+    <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/254748778388">Chat Now</a></p>
+    <p>✉️ <strong>Email:</strong> <a href="mailto:settlersinn@gmail.com">settlersinn@gmail.com</a></p>
+    <a class="whatsapp-btn" href="https://wa.me/254748778388?text=Hello%2C%20I%27d%20like%20to%20book%20a%20table.">
+      📲 Message on WhatsApp
+    </a>
+  
+
+  </div>
+
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps?q=Settlers+Inn+Kipkelion&output=embed" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+  <footer>
+    Settlers Inn · Hospitality in Every Bite<br>
+    Powered by EchoBiz · <a href="https://wa.me/254721635810" style="color:#58a6ff;">📲 WhatsApp Us</a>
+  </footer>
+
+</body>
+</html>
