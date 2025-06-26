@@ -719,12 +719,22 @@ footer p {
 
 
 <script>
+  // ✅ Auto-update footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ✅ Toggle contact info on mobile
+  function toggleContact() {
+    const contact = document.getElementById("contactInfo");
+    contact.classList.toggle("show");
+  }
+
+  // ✅ Toggle mobile nav menu
   function toggleMenu() {
     const nav = document.getElementById('navbar');
     nav.classList.toggle('active');
   }
 
-  // Optional: Close menu when link is clicked (for mobile)
+  // ✅ Close menu when link is clicked (for mobile)
   document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('#navbar a');
     links.forEach(link => {
@@ -733,28 +743,26 @@ footer p {
       });
     });
   });
-</script>
 
-<script>
+  // ✅ Send WhatsApp food order
   function sendQuickFoodOrder() {
-  const food = document.getElementById('quickFoodName').value;
-  const message = `Hi Settlers Inn 👋, I’d like to order: ${food}`;
-  const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
-  window.location.href = url; // 👈 safer redirect
-}
+    const food = document.getElementById('quickFoodName').value;
+    if (!food.trim()) return alert("Please enter a food order.");
+    const message = `Hi Settlers Inn 👋, I’d like to order: ${food}`;
+    const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
+    window.location.href = url; // ✅ safer for mobile
+  }
 
-function sendQuickRoomBooking() {
-  const room = document.getElementById('quickRoomType').value;
-  const message = `Hi Settlers Inn 👋, I’d like to book a ${room}`;
-  const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
-  window.location.href = url; // 👈 safer redirect
-}
-  <script async defer crossorigin="anonymous" 
-  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" 
-  nonce="fbReviews">
-</script>
+  // ✅ Send WhatsApp room booking
+  function sendQuickRoomBooking() {
+    const room = document.getElementById('quickRoomType').value;
+    if (!room || room.includes("Select")) return alert("Please select a room type.");
+    const message = `Hi Settlers Inn 👋, I’d like to book a ${room}`;
+    const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
+    window.location.href = url;
+  }
 
-<script>
+  // ✅ Register Service Worker
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js')
       .then(reg => {
@@ -764,6 +772,13 @@ function sendQuickRoomBooking() {
         console.error('❌ Service Worker registration failed:', err);
       });
   }
+</script>
+
+<!-- ✅ Facebook SDK must go before the fb-page div -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"
+  nonce="fbReviews">
 </script>
 
 </body>
