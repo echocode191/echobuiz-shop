@@ -403,6 +403,17 @@ footer p {
 }
 
 </style>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('serviceWorker.js')
+        .then(reg => console.log('✅ ServiceWorker registered:', reg.scope))
+        .catch(err => console.error('❌ ServiceWorker registration failed:', err));
+    });
+  }
+</script>
+
 </head>
 <body>
 
@@ -492,6 +503,24 @@ footer p {
     </form>
   </div>
 </section>
+<section style="margin: 4rem auto; max-width: 800px; padding: 2rem 1rem; border-top: 1px solid #30363d;">
+  <h2 style="color: #58a6ff; text-align: center;">💬 Facebook Reviews</h2>
+  <div style="display: flex; justify-content: center;">
+    <div class="fb-page" 
+      data-href="https://www.facebook.com/settlersinnke" 
+      data-tabs="timeline" 
+      data-width="380" 
+      data-height="400" 
+      data-small-header="false" 
+      data-adapt-container-width="true" 
+      data-hide-cover="false" 
+      data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/settlersinnke" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/settlersinnke">Settlers Inn</a>
+      </blockquote>
+    </div>
+  </div>
+</section>
 
 
 <section class="reviews">
@@ -511,51 +540,170 @@ footer p {
     </div>
   </div>
 </section>
-<footer style="background: linear-gradient(to right, #161b22, #0d1117); padding: 3rem 1rem; border-top: 1px solid #2b3137; font-family: 'Fira Code', monospace; color: #c9d1d9;">
-  <div style="max-width: 1000px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+<!-- Footer START -->
+<footer class="settlers-footer">
+  <div class="footer-container">
 
-    <!-- Brand Info -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="color: #9fef00;">Settlers Inn</h3>
+    <!-- Brand & Tagline -->
+    <div class="footer-col">
+      <h3>Settlers Inn</h3>
       <p>📍 Kipkelion, Kenya Highlands</p>
       <p>Where Settlers Still Eat Like Kings.</p>
     </div>
 
     <!-- Quick Links -->
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="color: #58a6ff;">Quick Links</h4>
-      <p><a href="index.html">🏠 Home</a></p>
-      <p><a href="menu.html">🥘 Menu</a></p>
-      <p><a href="accommodation.html">🛏️ Stay</a></p>
-      <p><a href="about.html">📖 About</a></p>
-      <p><a href="contact.html">📞 Contact</a></p>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="menu.html">🥘 Menu</a></li>
+        <li><a href="accommodation.html">🛏️ Stay</a></li>
+        <li><a href="about.html">📖 About</a></li>
+        <li><a href="contact.html">📞 Contact</a></li>
+      </ul>
     </div>
 
-    <!-- Contacts -->
-    <div style="flex: 1; min-width: 220px;">
-      <h4 style="color: #58a6ff;">Contact Us</h4>
-      <p>📞 Hotel: <a href="tel:+254748778388">0748 778388</a></p>
-      <p>👤 Manager: <a href="tel:+2547XXXXXXX">07XX XXX XXX</a></p>
-      <p>👤 Owner: <a href="tel:+2547XXXXXXX">07XX XXX XXX</a></p>
-      <p>✉️ <a href="mailto:settlersinn@gmail.com">settlersinn@gmail.com</a></p>
+    <!-- Contact Details -->
+    <div class="footer-col" id="contactCol">
+      <h4 onclick="toggleContact()">Contact Us ▼</h4>
+      <div class="contact-info" id="contactInfo">
+        <p>📞 Hotel: <a href="tel:+254748778388">0748 778388</a></p>
+        <p>👤 Manager: <a href="tel:+2547XXXXXXX">07XX XXX XXX</a></p>
+        <p>👤 Owner: <a href="tel:+2547XXXXXXX">07XX XXX XXX</a></p>
+        <p>✉️ <a href="mailto:settlersinn@gmail.com">settlersinn@gmail.com</a></p>
+      </div>
     </div>
+
   </div>
 
-  <div style="text-align: center; margin-top: 2rem;">
-    <a 
-      href="https://wa.me/254748778388?text=Hi%20Settlers%20Inn%2C%20I%20love%20your%20place%20and%20would%20like%20to%20book!" 
-      class="whatsapp-button"
-      style="display: inline-block; background: #25D366; color: #fff; padding: 0.7rem 1.5rem; font-weight: bold; border-radius: 8px; text-decoration: none; transition: 0.3s ease;"
-      target="_blank"
-    >
+  <!-- WhatsApp CTA -->
+  <div class="footer-cta">
+    <a href="https://wa.me/254748778388?text=Hi%20Settlers%20Inn%2C%20I%20want%20to%20book%20a%20room%20or%20table!" 
+       target="_blank" 
+       class="whatsapp-button">
       📲 Chat with Us on WhatsApp
     </a>
   </div>
 
-  <div style="text-align: center; margin-top: 2.5rem; font-size: 0.85rem; color: #8b949e;">
-    Built by <a href="https://wa.me/254721635810" target="_blank" style="color: #58a6ff;">EchoBiz</a> · All rights reserved © Settlers Inn
+  <!-- Credits -->
+  <div class="footer-bottom">
+    <p>Built with ❤️ by <a href="https://wa.me/254721635810" target="_blank">EchoBiz (Kimutai Gibson)</a></p>
+    <p>© <span id="year"></span> Settlers Inn. All rights reserved.</p>
   </div>
 </footer>
+<!-- Footer END -->
+
+<!-- STYLES -->
+<style>
+  .settlers-footer {
+    background: linear-gradient(to right, #161b22, #0d1117);
+    padding: 3rem 1.5rem 2rem;
+    font-family: 'Fira Code', monospace;
+    color: #c9d1d9;
+    border-top: 1px solid #2b3137;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .footer-col h3, .footer-col h4 {
+    color: #9fef00;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-col ul li {
+    margin: 0.4rem 0;
+  }
+
+  .footer-col a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .footer-col a:hover {
+    text-decoration: underline;
+    color: #1f6feb;
+  }
+
+  .contact-info {
+    transition: all 0.3s ease;
+  }
+
+  .footer-cta {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Fira Code';
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .whatsapp-button:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+    color: #8b949e;
+  }
+
+  .footer-bottom a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+
+  /* Mobile collapsible contact */
+  @media (max-width: 600px) {
+    #contactInfo {
+      display: none;
+    }
+
+    #contactInfo.show {
+      display: block;
+    }
+  }
+</style>
+
+<!-- JS for year & collapsible contact -->
+<script>
+  // Auto-update year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Toggle contact visibility on mobile
+  function toggleContact() {
+    const contact = document.getElementById("contactInfo");
+    contact.classList.toggle("show");
+  }
+</script>
 
 
   <div class="quick-access">
@@ -603,6 +751,12 @@ footer p {
     window.open(url, '_blank');
   }
 </script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" 
+  nonce="fbReviews">
+</script>
+
 
 </body>
 </html>
