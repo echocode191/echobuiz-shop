@@ -479,7 +479,7 @@ footer p {
   <!-- 🍽️ Food Order Form -->
   <div style="margin-bottom: 2rem;">
     <h3 style="color: #58a6ff; font-size: 1.2rem; text-align:center;">🍽️ Order Food</h3>
-    <form onsubmit="sendQuickFoodOrder(); return false;" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+   <form onsubmit="return sendQuickFoodOrder(event);" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
       <input type="text" id="quickFoodName" placeholder="e.g. Chapati & Beans" required style="padding: 0.6rem 1rem; font-family: 'Fira Code'; border: 1px solid #30363d; border-radius: 8px; background: #0d1117; color: #c9d1d9; flex: 1; min-width: 200px;">
       <button type="submit" style="padding: 0.6rem 1.2rem; background: #9fef00; color: #0d1117; border: none; border-radius: 8px; font-family: 'Fira Code'; cursor: pointer;">Send</button>
     </form>
@@ -488,7 +488,7 @@ footer p {
   <!-- 🛏️ Room Booking Form -->
   <div>
     <h3 style="color: #58a6ff; font-size: 1.2rem; text-align:center;">🛏️ Book a Room</h3>
-    <form onsubmit="sendQuickRoomBooking(); return false;" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+   <form onsubmit="sendQuickRoomBooking(event)" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
       <select id="quickRoomType" required style="padding: 0.6rem 1rem; font-family: 'Fira Code'; border: 1px solid #30363d; border-radius: 8px; background: #0d1117; color: #c9d1d9; flex: 1; min-width: 200px;">
         <option disabled selected>Select Room Type</option>
         <option value="Single Room">Single Room</option>
@@ -567,8 +567,8 @@ footer p {
       <h4 onclick="toggleContact()">Contact Us ▼</h4>
       <div class="contact-info" id="contactInfo">
         <p>📞 Hotel: <a href="tel:+254748778388">0748 778388</a></p>
-        <p>👤 Manager: <a href="tel:+2547XXXXXXX">07XX XXX XXX</a></p>
-        <p>👤 Owner: <a href="tel:+2547XXXXXXX">07XX XXX XXX</a></p>
+        <p>👤 Manager: <a href="tel:+254723709208">0723709208</a></p>
+        <p>👤 Owner: <a href="tel:+254727046813">07727046813</a></p>
         <p>✉️ <a href="mailto:settlersinn@gmail.com">settlersinn@gmail.com</a></p>
       </div>
     </div>
@@ -746,21 +746,38 @@ footer p {
 
   // ✅ Send WhatsApp food order
   function sendQuickFoodOrder() {
-    const food = document.getElementById('quickFoodName').value;
-    if (!food.trim()) return alert("Please enter a food order.");
-    const message = `Hi Settlers Inn 👋, I’d like to order: ${food}`;
-    const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
-    window.location.href = url; // ✅ safer for mobile
+    function sendQuickFoodOrder(event) {
+  event.preventDefault(); // ✅ Stops form from reloading the page
+  const food = document.getElementById('quickFoodName').value;
+  if (!food.trim()) return alert("Please enter a food order.");
+  const message = `Hi Settlers Inn 👋, I’d like to order: ${food}`;
+  const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
+  window.location.href = url;
+}
   }
+function sendQuickFoodOrder(event) {
+  event.preventDefault();
+  // your logic...
+  return false;
+}
 
   // ✅ Send WhatsApp room booking
-  function sendQuickRoomBooking() {
-    const room = document.getElementById('quickRoomType').value;
-    if (!room || room.includes("Select")) return alert("Please select a room type.");
-    const message = `Hi Settlers Inn 👋, I’d like to book a ${room}`;
-    const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
-    window.location.href = url;
+function sendQuickRoomBooking(event) {
+  event.preventDefault();
+  const room = document.getElementById('quickRoomType').value;
+  if (!room || room.includes("Select")) return alert("Please select a room type.");
+  const message = `Hi Settlers Inn 👋, I’d like to book a ${room}`;
+  const url = `https://wa.me/254748778388?text=${encodeURIComponent(message)}`;
+  window.location.href = url;
+}
+
   }
+function sendQuickRoomBooking(event) {
+  event.preventDefault();
+  // your logic...
+  return false;
+}
+
 
   // ✅ Register Service Worker
   if ('serviceWorker' in navigator) {
